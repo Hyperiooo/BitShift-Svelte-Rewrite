@@ -1,107 +1,88 @@
-@import '@fontsource/fira-mono';
+@import '@fontsource/roboto';
+@import '@fontsource/jetbrains-mono';
+
+* {
+	font-family: var(--font-sans)
+}
+
+body,
+html {
+	background-color: var(--canvasBg);
+	margin: 0px;
+	min-height: 100vh;
+	height: 100%;
+	overflow: hidden;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
 
 :root {
-	font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	--font-mono: 'Fira Mono', monospace;
-	--pure-white: #ffffff;
-	--primary-color: #b9c6d2;
-	--secondary-color: #d0dde9;
-	--tertiary-color: #edf0f8;
-	--accent-color: #ff3e00;
-	--heading-color: rgba(0, 0, 0, 0.7);
-	--text-color: #444444;
-	--background-without-opacity: rgba(255, 255, 255, 0.7);
-	--column-width: 42rem;
-	--column-margin-top: 4rem;
+	--font-sans: 'Roboto', sans-serif;
+	--font-mono: 'JetBrains Mono', monospace;
+	--canvScale: 10;
+	--canvTransformX: 0px;
+	--canvTransformY: 0px;
+	--canvX: 32px;
+	--canvY: 32px;
+	--vh: 0;
+	--vw: 0;
 }
 
-body {
-	min-height: 100vh;
-	margin: 0;
-	background-color: var(--primary-color);
-	background: linear-gradient(
-		180deg,
-		var(--primary-color) 0%,
-		var(--secondary-color) 10.45%,
-		var(--tertiary-color) 41.35%
-	);
+.ui-theme-black {
+	--bgMain: #070b10;
+	--bgMainT: #070b10e3;
+	--canvasBg: #101317;
+	--bgLight: #181b1e;
+	--bgDark: #0f1216;
+	--bgDarkT: #0f1216e3;
+	--textMain: #bcbec4;
+	--textDim: #a8abb0;
+	--important: #2741ff;
+	--importantT: #2741ffa9;
+	--error: #e0002c;
+	--errorT: #e0002ca9;
+	--importantText: #ffffff;
+	--scrollTrack: #000007;
+	--scrollHover: #222529;
+	--toolBarDim: #3f4146;
+	--toolBarHover: #7c7f84;
 }
 
-body::before {
-	content: '';
-	width: 80vw;
-	height: 100vh;
-	position: absolute;
-	top: 0;
-	left: 10vw;
-	z-index: -1;
-	background: radial-gradient(
-		50% 50% at 50% 50%,
-		var(--pure-white) 0%,
-		rgba(255, 255, 255, 0) 100%
-	);
-	opacity: 0.05;
+.ui-theme-dark {
+	--bgMain: #18171a;
+	--bgMainT: #18171ae3;
+	--canvasBg: #202022;
+	--bgLight: #262628;
+	--bgDark: #131214;
+	--bgDarkT: #131214e3;
+	--textMain: #ffffff;
+	--textDim: #cacaca;
+	--important: #2741ff;
+	--importantT: #2740ffa9;
+	--error: #ff163d;
+	--errorT: #ff163da9;
+	--importantText: #ffffff;
+	--scrollTrack: #201F22;
+	--scrollHover: #3B3A3D;
+	--toolBarDim: #49484a;
+	--toolBarHover: #7f7f80;
 }
 
-#svelte {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-}
-
-h1,
-h2,
-p {
-	font-weight: 400;
-	color: var(--heading-color);
-}
-
-p {
-	line-height: 1.5;
-}
-
-a {
-	color: var(--accent-color);
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-h1 {
-	font-size: 2rem;
-	text-align: center;
-}
-
-h2 {
-	font-size: 1rem;
-}
-
-pre {
-	font-size: 16px;
-	font-family: var(--font-mono);
-	background-color: rgba(255, 255, 255, 0.45);
-	border-radius: 3px;
-	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-	padding: 0.5em;
-	overflow-x: auto;
-	color: var(--text-color);
-}
-
-input,
-button {
-	font-size: inherit;
-	font-family: inherit;
-}
-
-button:focus:not(:focus-visible) {
-	outline: none;
-}
-
-@media (min-width: 720px) {
-	h1 {
-		font-size: 2.4rem;
-	}
+.ui-theme-light {
+	--bgMain: #ffffff;
+	--bgMainT: #ffffffd5;
+	--canvasBg: #eaeaee;
+	--bgLight: #dbdde0;
+	--bgDark: #eef0f5;
+	--bgDarkT: #eef0f5d5;
+	--textMain: #0b0c1a;
+	--textDim: #1b1c2e;
+	--important: #2741ff;
+	--importantT: #2741ffa9;
+	--error: #ff2d3e;
+	--errorT: #ff2d3ea9;
+	--importantText: #ffffff;
+	--scrollTrack: #eaeaee;
+	--scrollHover: #c0c2c9;
+	--toolBarDim: #535a70;
+	--toolBarHover: #181e31;
 }

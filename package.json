@@ -15,7 +15,11 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/cousine": "^4.5.9",
 		"@fontsource/fira-mono": "^4.5.0",
-		"cookie": "^0.4.1"
+		"@fontsource/jetbrains-mono": "^4.5.10",
+		"@fontsource/roboto": "^4.5.8",
+		"cookie": "^0.4.1",
+		"hypericons-svelte": "^0.0.6"
 	}
 }
